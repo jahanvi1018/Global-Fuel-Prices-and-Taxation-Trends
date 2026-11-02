@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Fuel Prices and Taxation Trends (2020–2026)</title>
+    <style>
+        :root {
+            --primary: #1e293b;
+            --accent: #2563eb;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #0f172a;
+            --muted: #64748b;
+        }
+        body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 20px; }
+        .container { max-width: 1100px; margin: 0 auto; }
+        header { background: var(--primary); color: white; padding: 30px; border-radius: 12px; margin-bottom: 24px; }
+        header h1 { margin: 0 0 10px 0; font-size: 28px; }
+        .meta-info { display: flex; gap: 20px; font-size: 14px; opacity: 0.9; }
+        .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 30px; }
+        .kpi-card { background: var(--card-bg); padding: 20px; border-radius: 10px; border: 1px solid #e2e8f0; box-shadow: 0 2px 4px rgba(0,0,0,0.04); }
+        .kpi-card .val { font-size: 24px; font-weight: bold; color: var(--accent); margin-top: 8px; }
+        .kpi-card .lbl { font-size: 13px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+        .section { background: var(--card-bg); padding: 24px; border-radius: 12px; border: 1px solid #e2e8f0; margin-bottom: 24px; }
+        .section h2 { margin-top: 0; border-bottom: 2px solid #f1f5f9; padding-bottom: 10px; color: var(--primary); }
+        .chart-container { display: flex; flex-direction: column; gap: 12px; margin-top: 15px; }
+        .bar-group { display: flex; align-items: center; gap: 12px; }
+        .bar-lbl { width: 140px; font-size: 14px; font-weight: 500; }
+        .bar-track { flex: 1; background: #e2e8f0; height: 24px; border-radius: 12px; overflow: hidden; display: flex; }
+        .bar-fill { height: 100%; display: flex; align-items: center; justify-content: flex-end; padding-right: 8px; color: white; font-size: 12px; font-weight: bold; }
+        .bg-petrol { background: #ef4444; }
+        .bg-diesel { background: #3b82f6; }
+        .bg-lpg { background: #10b981; }
+        .bg-tax { background: #8b5cf6; }
+        svg.diagram { width: 100%; max-width: 700px; margin: 0 auto; display: block; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Global Fuel Prices and Taxation Trends (2020–2026)</h1>
+            <div class="meta-info">
+                <span><strong>Candidate ID:</strong> en25cs30900852medicaps.ac.in</span>
+                <span><strong>Submission Date:</strong> 28 October 2026</span>
+            </div>
+        </header>
+
+        <!-- KPI Cards -->
+        <div class="kpi-grid">
+            <div class="kpi-card"><div class="lbl">Avg Petrol Price</div><div class="val">$2.282 / L</div></div>
+            <div class="kpi-card"><div class="lbl">Avg Diesel Price</div><div class="val">$2.134 / L</div></div>
+            <div class="kpi-card"><div class="lbl">Avg LPG Price</div><div class="val">$1.711 / L</div></div>
+            <div class="kpi-card"><div class="lbl">Global Avg Tax Rate</div><div class="val">26.77%</div></div>
+            <div class="kpi-card"><div class="lbl">Data Scope</div><div class="val">84 Countries</div></div>
+            <div class="kpi-card"><div class="lbl">Zero-Tax Holidays (2022)</div><div class="val">26 Cases</div></div>
+        </div>
+
+        <!-- Regional & Fuel Charts -->
+        <div class="section">
+            <h2>Regional Fuel Prices & Tax Rates Analysis</h2>
+            <div class="chart-container">
+                <div class="bar-group">
+                    <div class="bar-lbl">Petrol Price ($/L)</div>
+                    <div class="bar-track"><div class="bar-fill bg-petrol" style="width: 76%;">2.282</div></div>
+                </div>
+                <div class="bar-group">
+                    <div class="bar-lbl">Diesel Price ($/L)</div>
+                    <div class="bar-track"><div class="bar-fill bg-diesel" style="width: 71%;">2.134</div></div>
+                </div>
+                <div class="bar-group">
+                    <div class="bar-lbl">LPG Price ($/L)</div>
+                    <div class="bar-track"><div class="bar-fill bg-lpg" style="width: 57%;">1.711</div></div>
+                </div>
+                <div class="bar-group">
+                    <div class="bar-lbl">Avg Tax Rate (%)</div>
+                    <div class="bar-track"><div class="bar-fill bg-tax" style="width: 54%;">26.77%</div></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Income-Tier Analysis -->
+        <div class="section">
+            <h2>Income-Tier Price & Tax Elasticity</h2>
+            <div class="chart-container">
+                <div class="bar-group">
+                    <div class="bar-lbl">High Income (Tax)</div>
+                    <div class="bar-track"><div class="bar-fill bg-tax" style="width: 75%;">37.5%</div></div>
+                </div>
+                <div class="bar-group">
+                    <div class="bar-lbl">Upper Middle (Tax)</div>
+                    <div class="bar-track"><div class="bar-fill bg-tax" style="width: 52%;">26.0%</div></div>
+                </div>
+                <div class="bar-group">
+                    <div class="bar-lbl">Lower Middle (Tax)</div>
+                    <div class="bar-track"><div class="bar-fill bg-tax" style="width: 36%;">18.2%</div></div>
+                </div>
+                <div class="bar-group">
+                    <div class="bar-lbl">Low Income (Tax)</div>
+                    <div class="bar-track"><div class="bar-fill bg-tax" style="width: 22%;">11.0%</div></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- System Architecture Diagram -->
+        <div class="section">
+            <h2>System Architecture Diagram</h2>
+            <svg class="diagram" viewBox="0 0 600 160">
+                <rect x="20" y="50" width="140" height="60" rx="8" fill="#1e293b" />
+                <text x="90" y="85" fill="#fff" text-anchor="middle" font-size="14" font-weight="bold">SQLite DB</text>
+                
+                <path d="M 160 80 L 220 80" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)" />
+                
+                <rect x="230" y="50" width="140" height="60" rx="8" fill="#2563eb" />
+                <text x="300" y="85" fill="#fff" text-anchor="middle" font-size="14" font-weight="bold">Flask REST API</text>
+                
+                <path d="M 370 80 L 430 80" stroke="#2563eb" stroke-width="3" />
+                
+                <rect x="440" y="50" width="140" height="60" rx="8" fill="#10b981" />
+                <text x="510" y="75" fill="#fff" text-anchor="middle" font-size="13" font-weight="bold">Tableau / Deck</text>
+                <text x="510" y="95" fill="#fff" text-anchor="middle" font-size="11">Visual Frontend</text>
+            </svg>
+        </div>
+    </div>
+</body>
+</html>
