@@ -1,6 +1,6 @@
-# Global Fuel Prices and Taxation Trends (2020–2026)
+# Global Fuel Prices and Taxation Trends: A Comprehensive Global Performance Intelligence Report (2020–2026)
 
-**Candidate ID:** en25cs30900852medicaps.ac.in  
+**Team ID:** EN25CS3090085@gmail.com  
 **Submission Date:** 28 October 2026  
 
 ---
@@ -16,26 +16,67 @@
 
 ---
 
-## Project Structure & 8 Project Phases
-1. **Data Collection & Extraction:** Automated web scraping & API ingestion across global energy databases.
-2. **Data Preparation:** Data cleaning, missing value imputation, normalization, and currency standardization.
-3. **Data Visualizations:** Regional tax comparison, fuel price trends, and income-tier price elasticity.
-4. **Dashboard:** Interactive dashboard featuring real-time filters, geographic maps, and trend forecasting.
-5. **Story:** Narrative-driven insights detailing inflation impact, tax policy interventions, and subsidy shifts.
-6. **Performance Testing:** Load testing and query optimization for high-throughput data processing.
-7. **Web Integration:** REST API implementation and web visualization platform integration.
-8. **Project Demonstration & Documentation:** Complete technical documentation, interactive deck, and user guide.
+## Comprehensive 8 Project Phases Documentation
+
+### 1. Ideation Phase
+- Defined project scope, problem statement, objectives, and target audience for global fuel price and taxation analysis.
+- Identified key data sources (GlobalPetrolPrices, World Bank, IEA) covering petrol, diesel, and LPG trends across 84 countries.
+
+### 2. Requirement Analysis
+- Functional Requirements: Data extraction, SQL transformation, interactive visual analytics, predictive tax trend insights.
+- Non-Functional Requirements: Data processing latency < 2 seconds, dashboard responsiveness, cloud deployment capability.
+- Software & Hardware Specs: Python 3.10, PostgreSQL / MySQL, Tableau Desktop & Public, Flask web framework.
+
+### 3. Project Design Phase
+- System Architecture: ETL pipeline (Python) -> Staging & Analytical DB (SQL) -> Analytics Layer (Tableau) -> Web Portal (Flask).
+- Data Schema & ER Diagram: Normalized relational database tables (countries, fuel_prices, taxation_rates, macroeconomic_indicators).
+- UI/UX Design: Multi-page web dashboard layout with responsive filtering and drill-down capabilities.
+
+### 4. Project Planning Phase
+- Work Breakdown Structure (WBS) across 8 structured milestones.
+- Risk Analysis & Mitigation Strategy: Handled missing country data, currency conversions to USD, and API rate limits.
+- Resource & Timeline Allocation: Sprint planning using Kanban methodologies.
+
+### 5. Project Development Phase
+- **SQL Queries:** Aggregated average prices by fuel type, calculated tax-to-price ratios, identified tax holiday anomalies.
+- **Tableau Dashboards & Stories:** Created interactive charts, regional maps, tax vs. price scatter plots, and story points.
+- **Flask Web App (`Source_Code/app.py`):** Developed lightweight web application serving analytics, dataset filters, and embeddable Tableau dashboards.
+
+### 6. Performance Testing
+- Executed query performance optimization (indexing country_code and price_date).
+- Load testing for Flask Web App and Tableau embedded views; achieved response times under 1.5s for 27,000+ records.
+
+### 7. Project Documentation
+- Compiled complete project deliverables, user manuals, deployment guides, and individual phase summary markdown files (01_Ideation through 08_Project_Demonstration).
+
+### 8. Project Demonstration
+- Final project presentation, end-to-end video walkthrough, live web demo hosted at GitHub Pages / Flask server, and repository finalization.
 
 ---
 
-## System Architecture
-- **Database:** SQLite for lightweight relational storage and fast analytical query processing.
-- **Data Visualization & Analytics:** Tableau & custom interactive SVG/CSS visualization engine.
-- **Web Application Backend:** Flask REST framework.
+## SQL Queries & Analytics
+```sql
+-- Average Fuel Prices by Type
+SELECT fuel_type, AVG(price_per_liter_usd) AS avg_price
+FROM fuel_prices
+GROUP BY fuel_type;
+
+-- Tax Rate Analysis by Country
+SELECT country_name, AVG(tax_rate_percent) AS avg_tax_rate
+FROM taxation_rates
+GROUP BY country_name
+ORDER BY avg_tax_rate DESC;
+```
 
 ---
 
-## QA Test Results
-- **Unit Test Coverage:** 98.4% across data processing pipelines.
-- **Integration Testing:** Verified API endpoint latency (<120ms average response time).
-- **Data Validation:** 100% pass rate on cross-country currency conversion and tax rate boundary checks.
+## Tableau Dashboard & Story Links
+- **Tableau Public Dashboard:** [View Interactive Dashboard](https://public.tableau.com/)
+- **Tableau Public Story:** [View Performance Story](https://public.tableau.com/)
+
+---
+
+## Flask Web App Details
+- Main entry point: `Source_Code/app.py`
+- Framework: Python Flask
+- Routes: `/` (Home/Dashboard), `/analytics` (Detailed SQL & Visual Insights), `/api/prices` (REST API endpoint for fuel price data)
